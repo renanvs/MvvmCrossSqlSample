@@ -26,6 +26,8 @@ namespace SqlSample.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::SQLite.Net.Platform.XamarinAndroid.Resource.String.ApplicationName = global::SqlSample.Droid.Resource.String.ApplicationName;
+			global::SQLite.Net.Platform.XamarinAndroid.Resource.String.Hello = global::SqlSample.Droid.Resource.String.Hello;
 			global::SqlSample.Droid.Linked.Resource.String.ApplicationName = global::SqlSample.Droid.Resource.String.ApplicationName;
 			global::SqlSample.Droid.Linked.Resource.String.Hello = global::SqlSample.Droid.Resource.String.Hello;
 		}

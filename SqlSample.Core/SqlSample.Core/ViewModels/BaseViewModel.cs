@@ -46,7 +46,7 @@ namespace SqlSample.Core.ViewModels
 		{
 			var model = new Pessoa();
 			model.Nome = Nome;
-			_dataService.Insert(model);
+			_dataService.insertPessoaInDb(model);
 		}
 
 		public string ButtonName {
@@ -58,9 +58,9 @@ namespace SqlSample.Core.ViewModels
 			//_dataService.Insert(model);
 		}
 
-		private readonly IDataService _dataService;
+		private readonly IDataBaseService _dataService;
 
-		public BaseViewModel(IDataService dataService)
+		public BaseViewModel(IDataBaseService dataService)
 		{
 			_dataService = dataService;
 		}

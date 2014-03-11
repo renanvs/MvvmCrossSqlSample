@@ -35,9 +35,11 @@
   <ItemGroup>
     <Compile Include="App.cs" />
     <Compile Include="Entities\Message.cs" />
+    <Compile Include="IO\DeviceFileSystem.cs" />
+    <Compile Include="IO\IDeviceFileSystem.cs" />
     <Compile Include="Model\Pessoa.cs" />
-    <Compile Include="Services\DataService.cs" />
-    <Compile Include="Services\IDataService.cs" />
+    <Compile Include="Services\DataBaseService.cs" />
+    <Compile Include="Services\IDataBaseService.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -50,6 +52,15 @@
     <Reference Include="Cirrious.MvvmCross.Plugins.Messenger">
       <HintPath>..\..\..\MvvmCrossContacts\Contacts\binaries\Mvx\Portable\Cirrious.MvvmCross.Plugins.Messenger.dll</HintPath>
     </Reference>
+    <Reference Include="SQLite.Net">
+      <HintPath>..\..\packages\SQLite.Net-PCL.2.1.0\lib\portable-net4+sl4+wp7+win8+monotouch+MonoAndroid\SQLite.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLite.Net.Platform.XamarinAndroid">
+      <HintPath>..\..\packages\SQLite.Net.Platform.XamarinAndroid.2.1.0\lib\MonoAndroid\SQLite.Net.Platform.XamarinAndroid.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

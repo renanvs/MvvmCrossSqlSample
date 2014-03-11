@@ -6,8 +6,8 @@ using SqlSample.Core.Model;
 
 namespace SqlSample.Core.Services
 {
-	public interface IDataService
+	public interface IDataBaseService
 	{
-		void Insert(Pessoa pessoa);
+		void insertPessoaInDb(Pessoa pessoa);
 	}
 }

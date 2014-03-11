@@ -8,7 +8,6 @@ using Android.App;
 using Android.OS;
 using Android.Widget;
 using SqlSample.Core.ViewModels;
-
 namespace SqlSample.Droid.Views
 {
 	using Cirrious.MvvmCross.Droid.Views;
@@ -25,6 +24,8 @@ namespace SqlSample.Droid.Views
 
 			btInsert = FindViewById<Button>(Resource.Id.buttonInsert);
 			btInsert.Click += (o, e) => { AddNome(); };
+
+			Toast.MakeText(this, Application.Context.PackageName, ToastLength.Long).Show();
 		}
 
 		private void AddNome()

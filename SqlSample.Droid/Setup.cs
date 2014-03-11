@@ -4,7 +4,11 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
+using Cirrious.CrossCore;
+using SQLite.Net.Interop;
 using SqlSample.Core;
+using SqlSample.Core.IO;
+using SqlSample.Droid.IO;
 
 namespace SqlSample.Droid
 {
@@ -24,6 +28,7 @@ namespace SqlSample.Droid
 		/// <param name="applicationContext">The application context.</param>
 		public Setup(Context applicationContext)
 			: base(applicationContext) {
+			
 		}
 
 		/// <summary>
@@ -41,5 +46,11 @@ namespace SqlSample.Droid
 			return new MvxJsonNavigationSerializer();
 		}
 
+		protected override void InitializeLastChance()
+		{
+			base.InitializeLastChance();
+			Mvx.RegisterType(typeof(IDeviceFileSystem), typeof(DroidDeviceFileSystem));
+
+		}
 	}
 }

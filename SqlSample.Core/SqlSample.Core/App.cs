@@ -22,15 +22,15 @@ namespace SqlSample.Core
 		/// Initializes this instance.
 		/// </summary>
 		public override void Initialize() {
-			//this.CreatableTypes()
-				//.EndingWith("Service")
-				//.AsInterfaces()
-				//.RegisterAsLazySingleton();
+			/*this.CreatableTypes()
+				.EndingWith("Service")
+				.AsInterfaces()
+				.RegisterAsLazySingleton();*/
 
 			//// Start the app with the First View Model.
 			//this.RegisterAppStart<BaseViewModel>();
 
-			Mvx.RegisterType<IDataService, DataService>();
+			Mvx.RegisterType<IDataBaseService, DataBaseService>();
 			Mvx.RegisterSingleton<IMvxAppStart>(new MvxAppStart<BaseViewModel>());
 		}
 	}
